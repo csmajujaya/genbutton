@@ -89,14 +89,16 @@
          });
         
         // subCategories
+        itt=0
         dataButtons[6].forEach(function(buttonsubCat){
         $("#buttons").append(
             `
             <div class="container btnfull text-center">
-                <button type="button" class="btn btn-primary btn-lg categories" id="">${buttonsubCat}</button>
+                <button type="button" class="btn btn-primary btn-lg categories ${dataButtons[4][itt]}" id="${dataButtons[5][itt]}">${buttonsubCat}</button>
             </div>
             `
            );
+          itt++
          });
       }, function(reason) {
         console.error('error: ' + reason.result.error.message);
