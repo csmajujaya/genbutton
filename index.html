@@ -75,11 +75,11 @@
            );
          });
         // Categories
-        dataButtons[2].forEach(function(button){
+        dataButtons[2].forEach(function(buttonCat){
         $("#buttons").append(
             `
             <div class="container btnfull text-center">
-                <button type="button" class="btn btn-primary btn-lg partner" id="buttonId${button}">${button}</button>
+                <button type="button" class="btn btn-primary btn-lg categories" id="buttonId${buttonCat}">${buttonCat}</button>
             </div>
             `
            );
@@ -135,7 +135,7 @@
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
-    <div class="text-center">
+    <div class="center-block">
     <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
     <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
     </div>
