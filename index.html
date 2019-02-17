@@ -41,6 +41,7 @@
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
     <script>
+      var datadata;
     function makeApiCall() {
       var params = {
         // The ID of the spreadsheet to retrieve data from.
@@ -64,7 +65,7 @@
       var request = gapi.client.sheets.spreadsheets.values.get(params);
       request.then(function(response) {
         // TODO: Change code below to process the `response` object:
-        datadata=(response.result.values);
+        datadata = (response.result.values);
       }, function(reason) {
         console.error('error: ' + reason.result.error.message);
       });
