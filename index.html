@@ -17,6 +17,10 @@
         .btn {
             margin: 2px;
         }
+      
+        .hidden{
+           display: none;
+        }
 
         /* * {
                 border-style: solid;
@@ -64,7 +68,7 @@
         // TODO: Change code below to process the `response` object:
         dataButtons = (response.result.values);
         // olah data buttons
-        // Partners
+        // partners
         dataButtons[0].forEach(function(button){
         $("#buttons").append(
             `
@@ -81,7 +85,7 @@
         $("#buttons").append(
             `
             <div class="container btnfull text-center">
-                <button type="button" class="btn btn-primary btn-lg categories ${dataButtons[1][itt]}" id="${dataButtons[2][itt]}">${buttonCat}</button>
+                <button type="button" class="btn btn-primary btn-lg categories hidden ${dataButtons[1][itt]}" id="${dataButtons[2][itt]}">${buttonCat}</button>
             </div>
             `
            );
@@ -94,7 +98,7 @@
         $("#buttons").append(
             `
             <div class="container btnfull text-center">
-                <button type="button" class="btn btn-primary btn-lg categories ${dataButtons[4][itt]}" id="${dataButtons[5][itt]}">${buttonsubCat}</button>
+                <button type="button" class="btn btn-primary btn-lg hidden subCategories ${dataButtons[4][itt]}" id="${dataButtons[5][itt]}">${buttonsubCat}</button>
             </div>
             `
            );
@@ -107,7 +111,7 @@
         $("#buttons").append(
             `
             <div class="container btnfull text-center">
-                <button type="button" class="btn btn-primary btn-lg categories ${dataButtons[7][itt]}" id="${dataButtons[8][itt]}">${buttonitem}</button>
+                <button type="button" class="btn btn-primary btn-lg hidden itmes ${dataButtons[7][itt]}" id="${dataButtons[8][itt]}">${buttonitem}</button>
             </div>
             `
            );
