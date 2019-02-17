@@ -100,6 +100,19 @@
            );
           itt++
          });
+        
+        // item
+        itt=0
+        dataButtons[9].forEach(function(buttonitem){
+        $("#buttons").append(
+            `
+            <div class="container btnfull text-center">
+                <button type="button" class="btn btn-primary btn-lg categories ${dataButtons[7][itt]}" id="${dataButtons[8][itt]}">${buttonitem}</button>
+            </div>
+            `
+           );
+          itt++
+         });
       }, function(reason) {
         console.error('error: ' + reason.result.error.message);
       });
