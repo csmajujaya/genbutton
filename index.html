@@ -27,11 +27,8 @@
 </head>
     
   <body>
-    <div class="container btnfull">
-        <button type="button" class="btn btn-primary btn-lg" id="buttonid">Buttons</button>
-    </div>
-    <div class="container btnfull">
-        <button type="button" class="btn btn-primary btn-lg" id="buttonid">Buttons</button>
+    <div id="buttons">
+        
     </div>
 
     <!-- google jquery -->
@@ -41,7 +38,7 @@
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
     <script>
-      var datadata;
+      var dataButtons;
     function makeApiCall() {
       var params = {
         // The ID of the spreadsheet to retrieve data from.
@@ -65,7 +62,17 @@
       var request = gapi.client.sheets.spreadsheets.values.get(params);
       request.then(function(response) {
         // TODO: Change code below to process the `response` object:
-        datadata = (response.result.values);
+        dataButtons = (response.result.values);
+        // olah data buttons
+        dataButtons[0].forEach(function(button){
+        $("#buttons").append(
+            `
+            <div class="container btnfull text-center">
+                <button type="button" class="btn btn-primary btn-lg partner" id="buttonId${button}">${button}</button>
+            </div>
+            `
+        );
+    });
       }, function(reason) {
         console.error('error: ' + reason.result.error.message);
       });
