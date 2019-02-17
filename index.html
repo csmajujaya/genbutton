@@ -64,6 +64,7 @@
         // TODO: Change code below to process the `response` object:
         dataButtons = (response.result.values);
         // olah data buttons
+        // Partners
         dataButtons[0].forEach(function(button){
         $("#buttons").append(
             `
@@ -71,8 +72,18 @@
                 <button type="button" class="btn btn-primary btn-lg partner" id="buttonId${button}">${button}</button>
             </div>
             `
-        );
-    });
+           );
+         });
+        // Categories
+        dataButtons[2].forEach(function(button){
+        $("#buttons").append(
+            `
+            <div class="container btnfull text-center">
+                <button type="button" class="btn btn-primary btn-lg partner" id="buttonId${button}">${button}</button>
+            </div>
+            `
+           );
+         });
       }, function(reason) {
         console.error('error: ' + reason.result.error.message);
       });
@@ -124,7 +135,9 @@
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
+    <div class="text-center">
     <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
     <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
+    </div>
   </body>
 </html>
