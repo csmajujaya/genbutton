@@ -34,6 +34,9 @@
     <div id="buttons">
         
     </div>
+    <div id="sandiwara">
+      
+    </div>
 
     <!-- google jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -75,6 +78,15 @@
             <div class="container btnfull text-center">
                 <button type="button" class="btn btn-primary btn-lg partner" id="${button}">${button}</button>
             </div>
+            `
+           );
+         $("#sandiwara").append(
+            `
+            $("#${button}").click(function(){
+                alert("Clicked!!");
+                $(".partner").addClass("hidden");
+                $(".${button}").removeClass("hidden");
+            });
             `
            );
          });
