@@ -34,10 +34,6 @@
     <div id="buttons">
         
     </div>
-    <div id="sandiwara">
-      
-    </div>
-
     <!-- google jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- bootstrap js -->
@@ -82,10 +78,9 @@
            );
          $("#sandiwara").append(
             `
-            $("#${button}").click(function(){
-                alert("Clicked!!");
-                $(".partner").addClass("hidden");
-                $(".${button}").removeClass("hidden");
+            $("#${button}").click(function(){<br>
+                $(".partner").addClass("hidden");<br>
+                $(".${button}").removeClass("hidden");<br>
             });
             `
            );
@@ -184,12 +179,8 @@
     <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
     <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
     </div>
-    <script id="scripts">
-        $("#NIEKEN").click(function(){
-            alert("Clicked!!");
-            $(".partner").addClass("hidden");
-            $(".NIEKEN").removeClass("hidden");
-        });
-    </script>
+    <div id="sandiwara">
+      
+    </div>
   </body>
 </html>
