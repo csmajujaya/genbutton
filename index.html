@@ -74,13 +74,27 @@
             `
            );
          });
+        
         // Categories
         var itt=0
         dataButtons[3].forEach(function(buttonCat){
         $("#buttons").append(
             `
             <div class="container btnfull text-center">
-                <button type="button" class="btn btn-primary btn-lg categories" id="${dataButtons[2][itt]}">${buttonCat}</button>
+                <button type="button" class="btn btn-primary btn-lg categories ${dataButtons[1][itt]}" id="${dataButtons[2][itt]}">${buttonCat}</button>
+            </div>
+            `
+           );
+          itt++
+         });
+        
+        // subCategories
+        itt=0
+        dataButtons[6].forEach(function(buttonsubCat){
+        $("#buttons").append(
+            `
+            <div class="container btnfull text-center">
+                <button type="button" class="btn btn-primary btn-lg categories ${dataButtons[4][itt]}" id="${dataButtons[5][itt]}">${buttonsubCat}</button>
             </div>
             `
            );
