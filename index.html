@@ -73,7 +73,7 @@
         $("#buttons").append(
             `
             <div class="container btnfull text-center">
-                <button type="button" class="btn btn-primary btn-lg partner" id="buttonId${button}">${button}</button>
+                <button type="button" class="btn btn-primary btn-lg partner" id="${button}">${button}</button>
             </div>
             `
            );
@@ -173,9 +173,10 @@
     <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
     </div>
     <script id="scripts">
-        $("#buttonIdNIEKEN").click(function(){
+        $("#NIEKEN").click(function(){
+            alert("Clicked!!");
             $(".partner").addClass("hidden");
-            $(".UNIKEN").removeClass("hidden");
+            $(".NIEKEN").removeClass("hidden");
         });
     </script>
   </body>
