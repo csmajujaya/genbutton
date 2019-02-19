@@ -81,7 +81,7 @@
             $("#${button}").click(function(){<br>
                 $(".partner").addClass("hidden");<br>
                 $(".${button}").removeClass("hidden");<br>
-            });
+            });<br>
             `
            );
          });
@@ -107,6 +107,14 @@
             <div class="container btnfull text-center">
                 <button type="button" class="btn btn-primary btn-lg hidden subCategories ${dataButtons[4][itt]}" id="${dataButtons[5][itt]}">${buttonsubCat}</button>
             </div>
+            `
+           );
+          $("#sandiwara").append(
+            `
+            $("#${dataButtons[5][itt]}").click(function(){<br>
+                $(".subCategories").addClass("hidden");<br>
+                $(".${dataButtons[5][itt]}").removeClass("hidden");<br>
+            });<br>
             `
            );
           itt++
