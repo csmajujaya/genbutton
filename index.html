@@ -31,6 +31,11 @@
 </head>
     
   <body>
+    <div>
+        <div class="container btnfull text-center">
+            <button type="button" class="btn btn-primary btn-lg" id="homeBtn">HOME</button>
+        </div>
+    </div>
     <div id="buttons">
         
     </div>
@@ -134,7 +139,7 @@
         $("#buttons").append(
             `
             <div class="container btnfull text-center">
-                <button type="button" class="btn btn-primary btn-lg hidden itmes ${dataButtons[7][itt]}" id="${dataButtons[8][itt]}">${buttonitem}</button>
+                <button type="button" class="btn btn-primary btn-lg hidden items ${dataButtons[7][itt]}" data-toggle="modal" data-target="#modal${dataButtons[8][itt]}" id="${dataButtons[8][itt]}">${buttonitem}</button>
             </div>
             `
            );
@@ -196,7 +201,11 @@
     <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
     </div>
     <div id="sandiwara">
-      
+      $("#homeBtn").click(function () {<br>
+            $(".btn").addClass("hidden");<br>
+            $(".partner").removeClass("hidden");<br>
+            $("#homeBtn").removeClass("hidden");<br>
+        });<br>
     </div>
   </body>
 </html>
