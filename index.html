@@ -77,7 +77,7 @@
         $("#buttons").append(
             `
             <div class="container btnfull text-center">
-                <button type="button" class="btn btn-primary btn-lg partner" id="${button}">${button}</button>
+                <button type="button" class="btn btngen btn-primary btn-lg partner" id="${button}">${button}</button>
             </div>
             `
            );
@@ -97,7 +97,7 @@
         $("#buttons").append(
             `
             <div class="container btnfull text-center">
-                <button type="button" class="btn btn-primary btn-lg categories hidden ${dataButtons[1][itt]}" id="${dataButtons[2][itt]}">${buttonCat}</button>
+                <button type="button" class="btn btngen btn-primary btn-lg categories hidden ${dataButtons[1][itt]}" id="${dataButtons[2][itt]}">${buttonCat}</button>
             </div>
             `
            );
@@ -118,7 +118,7 @@
         $("#buttons").append(
             `
             <div class="container btnfull text-center">
-                <button type="button" class="btn btn-primary btn-lg hidden subCategories ${dataButtons[4][itt]}" id="${dataButtons[5][itt]}">${buttonsubCat}</button>
+                <button type="button" class="btn btngen btn-primary btn-lg hidden subCategories ${dataButtons[4][itt]}" id="${dataButtons[5][itt]}">${buttonsubCat}</button>
             </div>
             `
            );
@@ -139,7 +139,7 @@
         $("#buttons").append(
             `
             <div class="container btnfull text-center">
-                <button type="button" class="btn btn-primary btn-lg hidden items ${dataButtons[7][itt]}" data-toggle="modal" data-target="#modal${dataButtons[8][itt]}" id="${dataButtons[8][itt]}">${buttonitem}</button>
+                <button type="button" class="btn btngen btn-primary btn-lg hidden items ${dataButtons[7][itt]}" data-toggle="modal" data-target="#modal${dataButtons[8][itt]}" id="${dataButtons[8][itt]}">${buttonitem}</button>
             </div>
             `
            );
@@ -202,7 +202,7 @@
     </div>
     <div id="sandiwara">
       $("#homeBtn").click(function () {<br>
-            $(".btn").addClass("hidden");<br>
+            $(".btngen").addClass("hidden");<br>
             $(".partner").removeClass("hidden");<br>
             $("#homeBtn").removeClass("hidden");<br>
         });<br>
