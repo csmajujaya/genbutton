@@ -96,6 +96,14 @@
             </div>
             `
            );
+          $("#sandiwara").append(
+            `
+            $("#${dataButtons[2][itt]}").click(function(){<br>
+                $(".categories").addClass("hidden");<br>
+                $(".${dataButtons[2][itt]}").removeClass("hidden");<br>
+            });<br>
+            `
+           );
           itt++
          });
         
